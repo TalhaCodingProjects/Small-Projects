@@ -36,6 +36,10 @@ body{
     height: 100%;
 }
 
+.wrapper.active .form-wrapper.sign-in{
+    transform: translateY(-450px);
+}
+
 h2{
     font-size: 30px;
     color: #fff;
@@ -56,6 +60,7 @@ h2{
     font-size: 16px;
     color: #fff;
     pointer-events: none;
+    transition: .5s;
 }
 
 .input-group input{
@@ -67,6 +72,12 @@ h2{
     background: transparent;
     outline: none;
     border: none;
+
+}
+
+.input-group input:focus~label,
+.input-group input:valid~label {
+    top: -5px;
 }
 
 .remember{
